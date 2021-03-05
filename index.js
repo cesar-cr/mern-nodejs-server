@@ -7,7 +7,7 @@ const app = express();
 // conectar a la BD
 connectDB();
 // habilitar cors
-app.use(cors());
+app.use(cors({credentials:true, origin: 'https://cesar-app-restserver.herokuapp.com/'}));
 // habilitar express.json
 app.use(express.json({ extended: true }));
 // puerto de APP
